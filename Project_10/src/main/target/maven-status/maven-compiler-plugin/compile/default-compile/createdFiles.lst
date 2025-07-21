@@ -8,6 +8,7 @@ com\rays\dto\SubjectDTO.class
 com\rays\form\ProductForm.class
 com\rays\common\mail\EmailForm.class
 com\rays\form\ForgetPasswordForm.class
+com\rays\form\PhysicianForm.class
 com\rays\dao\CollegeDAOImpl.class
 com\rays\dao\CourseDAOInt.class
 com\rays\common\attachment\AttachmentDAOInt.class
@@ -28,7 +29,7 @@ com\rays\dao\SubjectDAOImpl.class
 com\rays\form\RoleForm.class
 com\rays\service\SubjectServiceImpl.class
 com\rays\ctl\FacultyCtl.class
-com\rays\form\ClientForm.class
+com\rays\service\PhysicianServiceInt.class
 com\rays\common\BaseForm.class
 com\rays\form\MarksheetForm.class
 com\rays\dao\ItemDAOInt.class
@@ -47,6 +48,7 @@ com\rays\common\attachment\AttachmentSummaryDTO.class
 com\rays\dto\MarksheetDTO.class
 com\rays\dao\RoleDAOInt.class
 com\rays\common\attachment\AttachmentBaseDTO.class
+com\rays\ctl\PhysicianCtl.class
 com\rays\service\CollegeServiceInt.class
 com\rays\dto\FacultyDTO.class
 com\rays\service\CartServiceImpl.class
@@ -57,10 +59,12 @@ com\rays\dao\CartDAOInt.class
 com\rays\dto\CourseDTO.class
 com\rays\form\StudentForm.class
 com\rays\common\BaseServiceInt.class
+com\rays\dto\PhysicianDTO.class
 com\rays\ctl\SubjectCtl.class
 com\rays\dao\CollegeDAOInt.class
 com\rays\service\CollegeServiceImpl.class
 com\rays\service\ProductServiceImpl.class
+com\rays\service\PhysicianServiceImpl.class
 com\rays\service\CourseServiceImpl.class
 com\rays\dao\FacultyDAOInt.class
 com\rays\common\ORSResponse.class
@@ -83,7 +87,6 @@ com\rays\common\attachment\AttachmentServiceInt.class
 com\rays\form\FacultyForm.class
 com\rays\dto\ProductDTO.class
 com\rays\form\LoginForm.class
-com\rays\dao\ClientDAOImpl.class
 com\rays\ctl\UserCtl.class
 com\rays\ctl\TimeTableCtl.class
 com\rays\dto\StudentDTO.class
@@ -93,6 +96,7 @@ com\rays\ProjectOrsApplication$1.class
 com\rays\dto\TimeTableDTO.class
 com\rays\dao\ProductDAOInt.class
 com\rays\common\mail\EmailDTO.class
+com\rays\dao\PhysicianDAOImpl.class
 com\rays\common\attachment\AttachmentCtl.class
 com\rays\service\RoleServiceInt.class
 com\rays\dao\FacultyDAOImpl.class
@@ -105,14 +109,11 @@ com\rays\common\message\MessageServiceImpl.class
 com\rays\dao\StudentDAOImpl.class
 com\rays\exception\ApplicationException.class
 com\rays\common\mail\EmailServiceImpl.class
-com\rays\ctl\ClientCtl.class
 com\rays\ctl\StudentCtl.class
-com\rays\service\ClientServiceInt.class
 com\rays\form\CartForm.class
 com\rays\form\MyProfileForm.class
 com\rays\ctl\CartCtl.class
 com\rays\dao\TimeTableDAOImpl.class
-com\rays\dao\ClientDAOInt.class
 com\rays\exception\DuplicateRecordException.class
 com\rays\common\BaseServiceImpl.class
 com\rays\common\UserContext.class
@@ -122,8 +123,6 @@ com\rays\form\ChangePasswordForm.class
 com\rays\form\ItemForm.class
 com\rays\service\FacultyServiceInt.class
 com\rays\service\JWTUserDetailsService.class
-com\rays\service\ClientServiceImpl.class
-com\rays\dto\ClientDTO.class
 com\rays\common\MenuItem.class
 com\rays\dao\RoleDAOImpl.class
 com\rays\common\mail\EmailCtl.class
@@ -138,6 +137,7 @@ com\rays\common\attachment\AttachmentDTO.class
 com\rays\form\SubjectForm.class
 com\rays\dto\ItemDTO.class
 com\rays\common\message\MessageServiceInt.class
+com\rays\dao\PhysicianDAOInt.class
 com\rays\dao\UserDAOInt.class
 com\rays\config\JWTUtil.class
 com\rays\common\attachment\AttachmentServiceImpl.class

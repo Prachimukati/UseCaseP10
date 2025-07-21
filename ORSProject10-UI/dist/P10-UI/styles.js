@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Rays Software\Project10\Project_10\ORSProj10\ORSProject10-UI\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Rays Software\UseCase-project10\ORSProject10-UI\src\styles.css */"./src/styles.css");
 
 
 /***/ })

@@ -67,8 +67,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _loader_loader_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./loader/loader.component */ "./src/app/loader/loader.component.ts");
 /* harmony import */ var _spinner_spinner_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./spinner/spinner.component */ "./src/app/spinner/spinner.component.ts");
 /* harmony import */ var _user_myprofile_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./user/myprofile.component */ "./src/app/user/myprofile.component.ts");
-/* harmony import */ var _client_client_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./client/client.component */ "./src/app/client/client.component.ts");
-/* harmony import */ var _client_clientlist_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./client/clientlist.component */ "./src/app/client/clientlist.component.ts");
+/* harmony import */ var _physician_physician_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./physician/physician.component */ "./src/app/physician/physician.component.ts");
+/* harmony import */ var _physician_physicianlist_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./physician/physicianlist.component */ "./src/app/physician/physicianlist.component.ts");
 
 
 
@@ -116,18 +116,6 @@ var routes = [
         component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashboardComponent"]
     },
     {
-        path: 'client',
-        component: _client_client_component__WEBPACK_IMPORTED_MODULE_34__["ClientComponent"]
-    },
-    {
-        path: 'client/:id',
-        component: _client_client_component__WEBPACK_IMPORTED_MODULE_34__["ClientComponent"]
-    },
-    {
-        path: 'clientlist',
-        component: _client_clientlist_component__WEBPACK_IMPORTED_MODULE_35__["ClientlistComponent"]
-    },
-    {
         path: 'loader',
         component: _loader_loader_component__WEBPACK_IMPORTED_MODULE_31__["LoaderComponent"]
     },
@@ -162,6 +150,17 @@ var routes = [
     {
         path: 'messagelist',
         component: _message_message_list_component__WEBPACK_IMPORTED_MODULE_11__["MessageListComponent"]
+    },
+    {
+        path: 'physician',
+        component: _physician_physician_component__WEBPACK_IMPORTED_MODULE_34__["PhysicianComponent"]
+    },
+    {
+        path: 'physician/:id',
+        component: _physician_physician_component__WEBPACK_IMPORTED_MODULE_34__["PhysicianComponent"]
+    }, {
+        path: 'physicianlist',
+        component: _physician_physicianlist_component__WEBPACK_IMPORTED_MODULE_35__["PhysicianListComponent"]
     },
     {
         path: 'marksheet',
@@ -418,8 +417,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
 /* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./auth.service */ "./src/app/auth.service.ts");
 /* harmony import */ var _user_myprofile_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./user/myprofile.component */ "./src/app/user/myprofile.component.ts");
-/* harmony import */ var _client_client_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./client/client.component */ "./src/app/client/client.component.ts");
-/* harmony import */ var _client_clientlist_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./client/clientlist.component */ "./src/app/client/clientlist.component.ts");
+/* harmony import */ var _physician_physician_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./physician/physician.component */ "./src/app/physician/physician.component.ts");
+/* harmony import */ var _physician_physicianlist_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./physician/physicianlist.component */ "./src/app/physician/physicianlist.component.ts");
 
 
 
@@ -513,8 +512,8 @@ var AppModule = /** @class */ (function () {
                 _spinner_spinner_component__WEBPACK_IMPORTED_MODULE_42__["SpinnerComponent"],
                 _footer_footer_component__WEBPACK_IMPORTED_MODULE_43__["FooterComponent"],
                 _user_myprofile_component__WEBPACK_IMPORTED_MODULE_45__["MyprofileComponent"],
-                _client_client_component__WEBPACK_IMPORTED_MODULE_46__["ClientComponent"],
-                _client_clientlist_component__WEBPACK_IMPORTED_MODULE_47__["ClientlistComponent"],
+                _physician_physician_component__WEBPACK_IMPORTED_MODULE_46__["PhysicianComponent"],
+                _physician_physicianlist_component__WEBPACK_IMPORTED_MODULE_47__["PhysicianListComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -572,7 +571,7 @@ var AuthService = /** @class */ (function () {
             req = req.clone({
                 setHeaders: {
                     "withCredentials": "true",
-                    "name": "Prakhar",
+                    "name": "Prachi",
                     Authorization: this.http.getToken()
                 }
             });
@@ -1149,224 +1148,6 @@ var BaseCtl = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/client/client.component.css":
-/*!*********************************************!*\
-  !*** ./src/app/client/client.component.css ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NsaWVudC9jbGllbnQuY29tcG9uZW50LmNzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/client/client.component.html":
-/*!**********************************************!*\
-  !*** ./src/app/client/client.component.html ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<app-navbar></app-navbar>\r\n\r\n<style>\r\n  .grad {\r\n    background-image: linear-gradient(to bottom right, rgb(32, 168, 168), rgb(219, 231, 237));\r\n    background-repeat: no-repeat;\r\n    background-size: 100%;\r\n    padding-bottom: 25px;\r\n  }\r\n\r\n  .background {\r\n    padding-top: 3%;\r\n    padding-bottom: 13%;\r\n    background: url('assets/files/3.jpg') no-repeat center center;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    width: 100%;\r\n    height: auto;\r\n  }\r\n\r\n  .required-field {\r\n    color: red;\r\n  }\r\n\r\n  .alertRedColor {\r\n    color: red;\r\n  }\r\n</style>\r\n\r\n<div class=\"container-fluid background\">\r\n  <div class=\"row justify-content-center\">\r\n    <div class=\"col-sm-8 col-md-6 col-lg-4\">\r\n      <div class=\"card\">\r\n        <div class=\"card-body shadow-lg grad\">\r\n          <form name=\"assetForm\">\r\n            <h2 *ngIf=\"!form.data.id\" class=\"text-primary font-weight-bold\" style=\"text-align: center;\">\r\n              {{ 'Add Client' | translate }}\r\n            </h2>\r\n            <h2 *ngIf=\"form.data.id\" class=\"text-primary font-weight-bold\" style=\"text-align: center;\">\r\n              {{ 'Update Client' | translate }}\r\n            </h2>\r\n\r\n            <!-- Form error messages -->\r\n            <div *ngIf=\"form.error && form.message\" class=\"alert alert-danger alert-dismissible fade show\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n              {{ form.message }}\r\n            </div>\r\n            <div *ngIf=\"!form.error && form.message\" class=\"alert alert-success alert-dismissible fade show\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n              {{ form.message }}\r\n            </div>\r\n\r\n           <!-- Name Field with Validation -->\r\n           <div class=\"form-group pt-2\">\r\n            <label><b>{{ 'FullName' | translate }}</b><span class=\"required-field\">*</span></label>\r\n            <div class=\"input-group\">\r\n              <div class=\"input-group-prepend\">\r\n                <div class=\"input-group-text\"><i class=\"fa fa-user grey-text\"></i></div>\r\n              </div>\r\n              <input type=\"text\" name=\"fullName\" [(ngModel)]=\"form.data.fullName\" class=\"form-control\"\r\n                placeholder=\"{{ 'Enter fullName' | translate }}\">\r\n            </div>\r\n            <span *ngIf=\"form.inputerror?.fullName\" class=\"alertRedColor\">{{ form.inputerror.fullName }}</span>\r\n          </div>\r\n            <div>\r\n            <span class=\"pt-2\"><b>{{ 'AppointmentDate' | translate }}</b><span class=\"required-field\">*</span></span>\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fa fa-table grey-text\"></i></div>\r\n                </div>\r\n                <input type=\"date\" name=\"appointmentDate\" [value]=\"form.data.appointmentDate | date:'yyyy-MM-dd'\" \r\n                (input)=\"form.data.appointmentDate = parseDate($event.target.value)\" class=\"form-control form-control-sm\" required />\r\n              </div>\r\n            <span class=\"alertRedColor\" style=\" color: red;\">{{ form.inputerror.appointmentDate }}</span>\r\n          </div>\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label><b>{{ 'Phone' | translate }}</b><span class=\"required-field\">*</span></label>\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fa fa-phone grey-text\"></i></div>\r\n                </div>\r\n                <input type=\"text\" name=\"phone\" [(ngModel)]=\"form.data.phone\" class=\"form-control\"\r\n                  placeholder=\"{{ 'Enter Phone' | translate }}\" required>\r\n              </div>\r\n              <span *ngIf=\"form.inputerror?.phone\" class=\"alertRedColor\">{{ form.inputerror.phone }}</span>\r\n            </div>\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label><b>{{ 'Illness' | translate }}</b><span class=\"required-field\">*</span></label>\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fa fa-paint-brush grey-text\"></i></div>\r\n                </div>\r\n                <select class=\"form-control\" name=\"illness\" [(ngModel)]=\"form.data.illness\" aria-label=\"ngSelected\" required>*\r\n                  <option [ngValue]=\"undefined\">{{ 'Select  illness' | translate }}</option>\r\n                  <option value=\"Fever\">{{'Fever' | translate}} </option>\r\n                  <option value=\"Cold\">{{'Cold' | translate}} </option>\r\n                 <option value=\"Thyroid\">{{'Thyroid' | translate}} </option>\r\n\r\n                </select>\r\n              </div>\r\n              <span *ngIf=\"form.inputerror?.illness\" class=\"alertRedColor\">{{ form.inputerror.illness }}</span>\r\n            </div>\r\n\r\n            <div class=\"row pt-2 pl-2 pb-3\">\r\n  \r\n              <div class=\"col-md-3\"></div>\r\n              \r\n              <div class=\"pt-2\">\r\n                <button *ngIf=\"!form.data.id > 0\" (click)=\"submit()\" class=\"btn btn-success mr-2\">\r\n                  {{ 'Save' | translate }}\r\n                </button>\r\n              </div>\r\n            \r\n              <div class=\"col-md-1\"></div>\r\n            \r\n              <div class=\"pt-2\">\r\n                <button *ngIf=\"form.data.id > 0\" (click)=\"submit()\" class=\"btn btn-success mr-2\">\r\n                  {{ 'Update' | translate }}\r\n                </button>\r\n              </div>\r\n              \r\n              <div class=\"pt-2\">\r\n                <a class=\"btn btn-warning mr-1\" type=\"button\" [routerLink]=\"['/clientlist']\"\r\n                   style=\"text-decoration: none; color: white;\">\r\n                  {{ 'List' | translate }}\r\n                </a>\r\n              </div>\r\n              \r\n            </div>\r\n            \r\n          </form>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<app-footer></app-footer>"
-
-/***/ }),
-
-/***/ "./src/app/client/client.component.ts":
-/*!********************************************!*\
-  !*** ./src/app/client/client.component.ts ***!
-  \********************************************/
-/*! exports provided: ClientComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClientComponent", function() { return ClientComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../base.component */ "./src/app/base.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _service_locator_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service-locator.service */ "./src/app/service-locator.service.ts");
-
-
-
-
-
-var ClientComponent = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](ClientComponent, _super);
-    function ClientComponent(locator, route) {
-        var _this = _super.call(this, locator.endpoints.CLIENT, locator, route) || this;
-        _this.locator = locator;
-        _this.route = route;
-        _this.errorMessageTitle = '';
-        _this.errorMessageFullName = '';
-        return _this;
-    }
-    ClientComponent.prototype.validateForm = function (form) {
-        var flag = true;
-        var validator = this.serviceLocator.dataValidator;
-        flag = flag && validator.isNotNullObject(form.fullName);
-        flag = flag && validator.isNotNullObject(form.appointmentDate);
-        flag = flag && validator.isNotNullObject(form.phone);
-        flag = flag && validator.isNotNullObject(form.illness);
-        return flag;
-    };
-    ClientComponent.prototype.populateForm = function (form, data) {
-        form.id = data.id;
-        form.fullName = data.fullName;
-        form.appointmentDate = data.appointmentDate;
-        form.phone = data.phone;
-        form.illness = data.illness;
-    };
-    ClientComponent.prototype.validateName = function (event) {
-        var inputValue = event.target.value;
-        var inputChar = event.key;
-        var alphabetPattern = /^[a-zA-Z]*$/; // Pattern to match only alphabetic characters
-        if (!alphabetPattern.test(inputChar) && !['Backspace', 'Delete', 'Tab'].includes(inputChar)) {
-            event.preventDefault();
-            this.errorMessageFullName = 'Only alphabets are allowed.';
-            return;
-        }
-        if (inputValue.length < 3) {
-            this.errorMessageFullName = 'fullName must be at least 3 characters long.';
-        }
-        else if (inputValue.length > 15) {
-            this.errorMessageFullName = 'fullName must not exceed 15 characters.';
-        }
-        else {
-            this.errorMessageFullName = ''; // Clear error message if valid
-        }
-    };
-    ClientComponent.prototype.validateAlphabetInput = function (event) {
-        var charCode = event.which || event.keyCode;
-        var charStr = String.fromCharCode(charCode);
-        // Regular expression to test if the character is a letter
-        if (!/^[a-zA-Z]+$/.test(charStr)) {
-            event.preventDefault();
-        }
-    };
-    ClientComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-client',
-            template: __webpack_require__(/*! ./client.component.html */ "./src/app/client/client.component.html"),
-            styles: [__webpack_require__(/*! ./client.component.css */ "./src/app/client/client.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_locator_service__WEBPACK_IMPORTED_MODULE_4__["ServiceLocatorService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
-    ], ClientComponent);
-    return ClientComponent;
-}(_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseCtl"]));
-
-
-
-/***/ }),
-
-/***/ "./src/app/client/clientlist.component.css":
-/*!*************************************************!*\
-  !*** ./src/app/client/clientlist.component.css ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NsaWVudC9jbGllbnRsaXN0LmNvbXBvbmVudC5jc3MifQ== */"
-
-/***/ }),
-
-/***/ "./src/app/client/clientlist.component.html":
-/*!**************************************************!*\
-  !*** ./src/app/client/clientlist.component.html ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<app-navbar></app-navbar>\r\n\r\n<style>\r\n  #nnn {\r\n    background: none;\r\n    border: none;\r\n    cursor: pointer;\r\n  }\r\n\r\n  .panel-heading {\r\n    height: 50px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n  }\r\n\r\n  .search-inputs {\r\n    margin-top: 20px;\r\n  }\r\n\r\n  .search-inputs .form-control,\r\n  .search-inputs .btn {\r\n    margin-bottom: 10px;\r\n  }\r\n\r\n  .content-wrapper {\r\n    background: url('assets/files/teahu.png') no-repeat center center;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    width: auto;\r\n    height: 105vh;\r\n    padding: 20px;\r\n  }\r\n\r\n  .table-responsive {\r\n    margin-top: 20px;\r\n  }\r\n\r\n  .search-inputs .col-sm-2,\r\n  .search-inputs .col-sm-1 {\r\n    padding: 0 5px;\r\n  }\r\n\r\n  .alertRedColor {\r\n    color: red;\r\n  }\r\n</style>\r\n<div class=\"content-wrapper\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"panel panel-primary\" style=\"padding-top: 73px;\">\r\n      <div class=\"panel-heading\">\r\n        <h1 class=\"text-primary font-weight-bold\">{{ 'Client List' | translate }}</h1>\r\n      </div>\r\n\r\n      <div class=\"row search-inputs p-1 justify-content-center\">\r\n        <div class=\"col-sm-2\">\r\n          <input type=\"text\" name=\"fullName\" [(ngModel)]=\"form.searchParams.fullName\" class=\"form-control\"\r\n            placeholder=\"{{ 'Enter FullName' | translate }}\">\r\n\r\n        </div>\r\n\r\n        <div class=\"col-sm-2\">\r\n          <input type=\"date\" name=\"appointmentDate\" [(ngModel)]=\"form.searchParams.appointmentDate\" class=\"form-control\"\r\n            placeholder=\"{{ 'Enter appointmentDate ' | translate }}\">\r\n        </div>\r\n\r\n        <div class=\"col-sm-2\">\r\n          <input type=\"text\" name=\"phone\" [(ngModel)]=\"form.searchParams.phone\" class=\"form-control\"\r\n            placeholder=\"{{ 'Enter Phone no' | translate }}\">\r\n        </div>\r\n\r\n        <div class=\"col-sm-2\">\r\n          <select class=\"form-control\" name=\"illness\" [(ngModel)]=\"form.searchParams.illness\" aria-label=\"ngSelected\" required>\r\n            <option [ngValue]=\"undefined\">{{ 'Select illness' | translate }}</option>\r\n          <option value=\"Fever\">{{'Fever' | translate}} </option>\r\n                  <option value=\"Cold\">{{'Cold' | translate}} </option>\r\n                 <option value=\"Thyroid\">{{'Thyroid' | translate}} </option>          \r\n                </select>\r\n          \r\n        </div>\r\n\r\n        <div class=\"col-sm-1\">\r\n          <button (click)=\"submit()\" class=\"btn btn-primary\">{{ 'Search' | translate }}</button>\r\n        </div>\r\n\r\n        <div class=\"col-sm-2\">\r\n          <button (click)=\"forward('/client')\" type=\"button\" class=\"btn btn-success\">\r\n            {{ 'Add Client' | translate }}\r\n          </button>\r\n        </div>\r\n\r\n        <div class=\"col-sm-1\">\r\n          <button (click)=\"deleteMany()\" class=\"btn btn-danger\">{{ 'Delete' | translate }}</button>\r\n        </div>\r\n      </div>\r\n\r\n      <div *ngIf=\"form.error\" class=\"alert alert-danger alert-dismissible\">\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n        {{ form.message }}\r\n      </div>\r\n\r\n      <div *ngIf=\"!form.error && form.message != null\" class=\"alert alert-success alert-dismissible\">\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n        {{ form.message }}\r\n      </div>\r\n\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table table-bordered table-hover font-weight-bold text-dark\">\r\n          <thead class=\"thead-dark text-uppercase\">\r\n            <tr align=\"center\">\r\n              <th><input type=\"checkbox\" [(ngModel)]=\"isMasterSel\" name=\"list_name\"\r\n                  (change)=\"checkUncheckAll($event)\" /></th>\r\n              <th>{{ 'S.No' | translate }}</th>\r\n              <th>{{ 'Full Name' | translate }}</th>\r\n              <th>{{ 'appointmentDate ' | translate }}</th>\r\n              <th>{{ 'phone' | translate }}</th>\r\n              <th>{{ 'illness' | translate }}</th>\r\n              <th>{{ 'Edit' | translate }}</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr *ngFor=\"let m of form.list; let i = index\" align=\"center\">\r\n              <td><input type=\"checkbox\" #checkboxes (change)=\"checklistUpdate()\" name=\"list_name\" [id]=\"m.id\" /></td>\r\n              <td>{{ (form.pageNo * 5) + i + 1 }}</td>\r\n              <td>{{ m.fullName }}</td>\r\n              <td>{{ m.appointmentDate | date:'yyyy-MM-dd' }}</td>\r\n              <td>{{ m.phone }}</td>\r\n              <td>{{m.illness}}</td>\r\n\r\n              <td>\r\n                <button class=\"fa fa-edit text-primary\" id=\"nnn\" (click)=\"forward('/client/' + m.id)\">\r\n                </button>\r\n              </td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n\r\n        <div class=\"d-flex justify-content-between mt-3\">\r\n          <button (click)=\"previous()\" [disabled]=\"form.pageNo == 0\" class=\"btn btn-info\">{{ 'Previous' | translate }}</button>\r\n\r\n          <div>\r\n            <a class=\"btn btn-warning mr-1\" [routerLink]=\"['/clientlist']\" (click)=\"exit()\">\r\n              {{ 'Reset' | translate }}\r\n            </a>\r\n          </div>\r\n\r\n          <div *ngIf=\"form.list.length == 0\">\r\n            <a class=\"btn btn-warning mr-1\" [routerLink]=\"['/clientlist']\" (click)=\"exit()\">\r\n              {{ 'Back' | translate }}\r\n            </a>\r\n          </div>\r\n          <button (click)=\"next()\" [disabled]=\"nextList == 0\" class=\"btn btn-info\">{{ 'Next' | translate }}</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<app-footer></app-footer>"
-
-/***/ }),
-
-/***/ "./src/app/client/clientlist.component.ts":
-/*!************************************************!*\
-  !*** ./src/app/client/clientlist.component.ts ***!
-  \************************************************/
-/*! exports provided: ClientlistComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClientlistComponent", function() { return ClientlistComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _base_list_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../base-list.component */ "./src/app/base-list.component.ts");
-/* harmony import */ var _service_locator_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service-locator.service */ "./src/app/service-locator.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-
-
-
-
-
-
-var ClientlistComponent = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](ClientlistComponent, _super);
-    function ClientlistComponent(locator, route, httpClient) {
-        var _this = _super.call(this, locator.endpoints.CLIENT, locator, route) || this;
-        _this.locator = locator;
-        _this.route = route;
-        _this.httpClient = httpClient;
-        _this.myKey = "";
-        _this.errorMessageFullName = '';
-        _this.form = {
-            error: false,
-            message: null,
-            preload: [],
-            data: { id: null },
-            inputerror: {},
-            searchParams: {},
-            searchMessage: null,
-            list: [],
-            pageNo: 0
-        };
-        return _this;
-    }
-    ClientlistComponent.prototype.validateFullName = function (event) {
-        var inputValue = event.target.value;
-        var inputChar = event.key;
-        var alphabetPattern = /^[a-zA-Z]*$/; // Pattern to match only alphabetic characters
-        if (!alphabetPattern.test(inputChar) && !['Backspace', 'Delete', 'Tab'].includes(inputChar)) {
-            event.preventDefault();
-            this.errorMessageFullName = 'Only alphabets are allowed.';
-            return;
-        }
-        if (inputValue.length < 3) {
-            this.errorMessageFullName = 'name must be at least 3 characters .';
-        }
-        else if (inputValue.length > 15) {
-            this.errorMessageFullName = 'name must contain only 15 character.';
-        }
-        else {
-            this.errorMessageFullName = ''; // Clear error message if valid
-        }
-    };
-    ClientlistComponent.prototype.validateAlphabetInput = function (event) {
-        var charCode = event.which || event.keyCode;
-        var charStr = String.fromCharCode(charCode);
-        // Regular expression to test if the character is a letter
-        if (!/^[a-zA-Z]+$/.test(charStr)) {
-            event.preventDefault();
-        }
-    };
-    ClientlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-clientlist',
-            template: __webpack_require__(/*! ./clientlist.component.html */ "./src/app/client/clientlist.component.html"),
-            styles: [__webpack_require__(/*! ./clientlist.component.css */ "./src/app/client/clientlist.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_locator_service__WEBPACK_IMPORTED_MODULE_3__["ServiceLocatorService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"]])
-    ], ClientlistComponent);
-    return ClientlistComponent;
-}(_base_list_component__WEBPACK_IMPORTED_MODULE_2__["BaseListCtl"]));
-
-
-
-/***/ }),
-
 /***/ "./src/app/college/college-list.component.html":
 /*!*****************************************************!*\
   !*** ./src/app/college/college-list.component.html ***!
@@ -1727,7 +1508,7 @@ var EndpointServiceService = /** @class */ (function () {
         this.COURSE = this.SERVER_URL + "/Course";
         this.TIMETABLE = this.SERVER_URL + "/TimeTable";
         this.JASPERREPORT = this.SERVER_URL + "/Jasper";
-        this.CLIENT = this.SERVER_URL + "/Client";
+        this.PHYSICIAN = this.SERVER_URL + "/Physician";
     }
     EndpointServiceService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -3135,7 +2916,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<style type=\"text/css\">\r\n  .custom-select-box {\r\n    border-radius: 5px;\r\n    height: 20%;\r\n    width: 12%;\r\n    border-color: black;\r\n    /* Rounded corners */\r\n  }\r\n\r\n  .prakhar {\r\n    background-image: linear-gradient(220deg, #0d0a0b 0%, #009fc2 120%);\r\n  }\r\n\r\n  .c1 {\r\n    color: rgb(235, 6, 6);\r\n  }\r\n</style>\r\n\r\n<div class=\"header\">\r\n  <nav *ngIf=\"!isLogin()\" class=\"navbar navbar-expand-lg fixed-top prakhar\">\r\n    <div class=\"logo\">\r\n      <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">\r\n        <!-- <strong class=\"text-white\">Rays</strong> -->\r\n        <img src=\"assets\\files\\custom.png\" height=\"40px\" width=\"120px\" />\r\n      </a>\r\n    </div>\r\n    <select #locale (change)=\"changeLocale(locale.value)\" class=\"form-select custom-select-box\">\r\n      <option value=\"en\">\r\n        {{ \"&nbsp;&nbsp;Select Language\" | translate }}\r\n      </option>\r\n      <option value=\"en\" style=\"color: red\">English</option>\r\n      <option value=\"hi\" style=\"color: red\">{{ \"Hindi\" | translate }}</option>\r\n    </select>\r\n\r\n    <button class=\"navbar-toggler navbar-light\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"\r\n      aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\" style=\"font-size: 15px\">\r\n      <ul class=\"navbar-nav ml-auto\" style=\"padding-right: 7.5%\">\r\n        <li class=\"nav-item dropdown\">\r\n          <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['myNav']\" id=\"navbarDropdown\" role=\"button\"\r\n            data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n            <font style=\"color: white\">{{ \"Hi,Guest\" | translate }} </font>\r\n          </a>\r\n\r\n          <div class=\"dropdown-menu dropdown-ment-left\" id=\"myNav\" aria-labelledby=\"navbarDropdown\">\r\n            <a class=\"dropdown-item\" [routerLink]=\"['/login']\"><i class=\"fa fa-user\"></i> &nbsp;{{ \" Log In\" | translate\r\n              }}</a>\r\n            <a class=\"dropdown-item\" [routerLink]=\"['/signup']\"><i class=\"fa fa-users\"></i> &nbsp;{{\r\n              \"User Registration\" | translate\r\n              }}</a>\r\n          </div>\r\n        </li>\r\n        <li></li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n</div>\r\n\r\n<nav *ngIf=\"isLogin()\" class=\"navbar navbar-expand-lg fixed-top prakhar\">\r\n  <div class=\"logo\">\r\n    <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">\r\n      <!-- <strong class=\"text-white\">Rays</strong> -->\r\n      <img src=\"assets\\files\\custom.png\" height=\"40px\" width=\"120px\" />\r\n    </a>\r\n  </div>\r\n  <!-- <strong class=\"text-white\">NCS Pvt Ltd</strong> -->\r\n\r\n  <select #locale (change)=\"changeLocale(locale.value)\" class=\"form-select custom-select-box\">\r\n    <option value=\"en\">{{ \"&nbsp;&nbsp;Select Language\" | translate }}</option>\r\n    <option value=\"en\" style=\"color: red\">English</option>\r\n    <option value=\"hi\" style=\"color: red\">{{ \"Hindi\" | translate }}</option>\r\n  </select>\r\n\r\n  <button class=\"navbar-toggler navbar-light\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"\r\n    aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\r\n    <ul class=\"nav navbar-nav pl-2\">\r\n\r\n      \r\n       <li class=\"nav-item dropdown\" style=\"padding-left: 5px;\"><a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\"\r\n      id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n      <font style=\"color: white;\">{{'Client ' | translate}}</font>\r\n    </a>\r\n    <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n      <a class=\"dropdown-item\" [routerLink]=\"['/client']\"><i class=\"fa fa-user\"></i> &nbsp; &nbsp;{{'Add Client' |\r\n        translate}}</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['/clientlist']\"><i class=\"fa fa-list\"></i>&nbsp; {{'Client List' | translate}}</a>\r\n    </div>\r\n\r\n\r\n    <!-- =================================== USER =========================================== -->\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"User\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/user']\"><i class=\"fa fa-user\"></i>&nbsp;&nbsp;{{\r\n            \"Add User\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/userlist']\"><i class=\"fa fa-list\"></i>&nbsp;{{ \" User List\" |\r\n            translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Marksheet\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheet']\"><i class=\"fa fa-file\"></i> &nbsp;\r\n            {{ \"Add Marksheet\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheetlist']\"><i class=\"fa fa-paste\"></i> &nbsp;\r\n            {{ \"Marksheet List\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheetmeritlist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{ \"Marksheet Merit List\" | translate }}\r\n          </a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/getmarksheet']\"><i class=\"fa fa-copy\"></i> &nbsp;\r\n            {{ \"Get Marksheet\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Role\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/role']\"><i class=\"fa fa-user\"></i> &nbsp; &nbsp;\r\n            {{ \"Add Role\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/rolelist']\"><i class=\"fa fa-users\"></i> &nbsp; {{ \"Role List\" |\r\n            translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"College\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/college']\"><i class=\"fa fa-university\"></i> &nbsp;\r\n            {{ \"Add College\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/collegelist']\"><i class=\"fa fa-building\"></i> &nbsp;\r\n            {{ \"College List\" | translate }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Course\" | translate }} </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/course']\"><i class=\"fa fa-book\"></i> &nbsp; {{ \"Add Course\" |\r\n            translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/courselist']\"><i class=\"fa fa-list\"></i> &nbsp; {{ \"Course List\" |\r\n            translate }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Student\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/student']\"><i class=\"fa fa-user\"></i> &nbsp;\r\n            {{ \"Add Student\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/studentlist']\"><i class=\"fa fa-users\"></i> &nbsp;\r\n            {{\r\n            \"Student\r\n            List\" | translate\r\n            }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Faculty\" | translate }} </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/faculty']\"><i class=\"fa fa-users\"></i> &nbsp;\r\n            {{ \"Add Faculty\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/facultylist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{\r\n            \"Faculty\r\n            List\" | translate\r\n            }}</a>\r\n        </div>\r\n      </li>\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"TimeTable\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/timetable']\"><i class=\"fa fa-clock-o\"></i> &nbsp;\r\n            {{ \"Add TimeTable\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/timetablelist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{ \"TimeTable List\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Subject\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/subject']\"><i class=\"fa fa-calculator\"></i> &nbsp;\r\n            {{ \"Add Subject\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/subjectlist']\">\r\n            <i class=\"fa fa-list\"></i> &nbsp;\r\n            {{\r\n            \"Subject\r\n            List\" | translate\r\n            }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ form.data.fname }} ({{ form.data.role }})\r\n          </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" (click)=\"forward()\"><i class=\"fa fa-user-md\"></i> &nbsp;{{\r\n            \" My Profile\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/changepassword']\"><i class=\"fa fa-key\"></i> &nbsp;{{\r\n            \"Change Password\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"\" (click)=\"goToLink()\"><i class=\"fa fa-file\"></i> &nbsp;{{ \" Java Doc\"\r\n            | translate }}</a>\r\n\r\n          <a class=\"dropdown-item\" (click)=\"logout()\"><i class=\"fa fa-lock\"></i> &nbsp;{{ \" Log Out\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
+module.exports = "<style type=\"text/css\">\r\n  .custom-select-box {\r\n    border-radius: 5px;\r\n    height: 20%;\r\n    width: 12%;\r\n    border-color: black;\r\n    /* Rounded corners */\r\n  }\r\n\r\n  .prakhar {\r\n    background-image: linear-gradient(220deg, #0d0a0b 0%, #009fc2 120%);\r\n  }\r\n\r\n  .c1 {\r\n    color: rgb(235, 6, 6);\r\n  }\r\n</style>\r\n\r\n<div class=\"header\">\r\n  <nav *ngIf=\"!isLogin()\" class=\"navbar navbar-expand-lg fixed-top prakhar\">\r\n    <div class=\"logo\">\r\n      <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">\r\n        <!-- <strong class=\"text-white\">Rays</strong> -->\r\n        <img src=\"assets\\files\\custom.png\" height=\"40px\" width=\"120px\" />\r\n      </a>\r\n    </div>\r\n    <select #locale (change)=\"changeLocale(locale.value)\" class=\"form-select custom-select-box\">\r\n      <option value=\"en\">\r\n        {{ \"&nbsp;&nbsp;Select Language\" | translate }}\r\n      </option>\r\n      <option value=\"en\" style=\"color: red\">English</option>\r\n      <option value=\"hi\" style=\"color: red\">{{ \"Hindi\" | translate }}</option>\r\n    </select>\r\n\r\n    <button class=\"navbar-toggler navbar-light\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"\r\n      aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\" style=\"font-size: 15px\">\r\n      <ul class=\"navbar-nav ml-auto\" style=\"padding-right: 7.5%\">\r\n        <li class=\"nav-item dropdown\">\r\n          <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['myNav']\" id=\"navbarDropdown\" role=\"button\"\r\n            data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n            <font style=\"color: white\">{{ \"Hi,Guest\" | translate }} </font>\r\n          </a>\r\n\r\n          <div class=\"dropdown-menu dropdown-ment-left\" id=\"myNav\" aria-labelledby=\"navbarDropdown\">\r\n            <a class=\"dropdown-item\" [routerLink]=\"['/login']\"><i class=\"fa fa-user\"></i> &nbsp;{{ \" Log In\" | translate\r\n              }}</a>\r\n            <a class=\"dropdown-item\" [routerLink]=\"['/signup']\"><i class=\"fa fa-users\"></i> &nbsp;{{\r\n              \"User Registration\" | translate\r\n              }}</a>\r\n          </div>\r\n        </li>\r\n        <li></li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n</div>\r\n\r\n<nav *ngIf=\"isLogin()\" class=\"navbar navbar-expand-lg fixed-top prakhar\">\r\n  <div class=\"logo\">\r\n    <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">\r\n      <!-- <strong class=\"text-white\">Rays</strong> -->\r\n      <img src=\"assets\\files\\custom.png\" height=\"40px\" width=\"120px\" />\r\n    </a>\r\n  </div>\r\n  <!-- <strong class=\"text-white\">NCS Pvt Ltd</strong> -->\r\n\r\n  <select #locale (change)=\"changeLocale(locale.value)\" class=\"form-select custom-select-box\">\r\n    <option value=\"en\">{{ \"&nbsp;&nbsp;Select Language\" | translate }}</option>\r\n    <option value=\"en\" style=\"color: red\">English</option>\r\n    <option value=\"hi\" style=\"color: red\">{{ \"Hindi\" | translate }}</option>\r\n  </select>\r\n\r\n  <button class=\"navbar-toggler navbar-light\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"\r\n    aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\r\n    <ul class=\"nav navbar-nav pl-2\">\r\n\r\n      \r\n       <li class=\"nav-item dropdown\" style=\"padding-left: 5px;\"><a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\"\r\n      id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n      <font style=\"color: white;\">{{'Physician ' | translate}}</font>\r\n    </a>\r\n    <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n      <a class=\"dropdown-item\" [routerLink]=\"['/physician']\"><i class=\"fa fa-user\"></i> &nbsp; &nbsp;{{'Add Physician' |\r\n        translate}}</a>\r\n      <a class=\"dropdown-item\" [routerLink]=\"['/physicianlist']\"><i class=\"fa fa-list\"></i>&nbsp; {{'Physician List' | translate}}</a>\r\n    </div>\r\n\r\n\r\n    <!-- =================================== USER =========================================== -->\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"User\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/user']\"><i class=\"fa fa-user\"></i>&nbsp;&nbsp;{{\r\n            \"Add User\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/userlist']\"><i class=\"fa fa-list\"></i>&nbsp;{{ \" User List\" |\r\n            translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Marksheet\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheet']\"><i class=\"fa fa-file\"></i> &nbsp;\r\n            {{ \"Add Marksheet\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheetlist']\"><i class=\"fa fa-paste\"></i> &nbsp;\r\n            {{ \"Marksheet List\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheetmeritlist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{ \"Marksheet Merit List\" | translate }}\r\n          </a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/getmarksheet']\"><i class=\"fa fa-copy\"></i> &nbsp;\r\n            {{ \"Get Marksheet\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Role\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/role']\"><i class=\"fa fa-user\"></i> &nbsp; &nbsp;\r\n            {{ \"Add Role\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/rolelist']\"><i class=\"fa fa-users\"></i> &nbsp; {{ \"Role List\" |\r\n            translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"College\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/college']\"><i class=\"fa fa-university\"></i> &nbsp;\r\n            {{ \"Add College\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/collegelist']\"><i class=\"fa fa-building\"></i> &nbsp;\r\n            {{ \"College List\" | translate }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Course\" | translate }} </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/course']\"><i class=\"fa fa-book\"></i> &nbsp; {{ \"Add Course\" |\r\n            translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/courselist']\"><i class=\"fa fa-list\"></i> &nbsp; {{ \"Course List\" |\r\n            translate }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Student\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/student']\"><i class=\"fa fa-user\"></i> &nbsp;\r\n            {{ \"Add Student\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/studentlist']\"><i class=\"fa fa-users\"></i> &nbsp;\r\n            {{\r\n            \"Student\r\n            List\" | translate\r\n            }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Faculty\" | translate }} </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/faculty']\"><i class=\"fa fa-users\"></i> &nbsp;\r\n            {{ \"Add Faculty\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/facultylist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{\r\n            \"Faculty\r\n            List\" | translate\r\n            }}</a>\r\n        </div>\r\n      </li>\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"TimeTable\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/timetable']\"><i class=\"fa fa-clock-o\"></i> &nbsp;\r\n            {{ \"Add TimeTable\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/timetablelist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{ \"TimeTable List\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Subject\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/subject']\"><i class=\"fa fa-calculator\"></i> &nbsp;\r\n            {{ \"Add Subject\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/subjectlist']\">\r\n            <i class=\"fa fa-list\"></i> &nbsp;\r\n            {{\r\n            \"Subject\r\n            List\" | translate\r\n            }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ form.data.fname }} ({{ form.data.role }})\r\n          </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" (click)=\"forward()\"><i class=\"fa fa-user-md\"></i> &nbsp;{{\r\n            \" My Profile\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/changepassword']\"><i class=\"fa fa-key\"></i> &nbsp;{{\r\n            \"Change Password\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"\" (click)=\"goToLink()\"><i class=\"fa fa-file\"></i> &nbsp;{{ \" Java Doc\"\r\n            | translate }}</a>\r\n\r\n          <a class=\"dropdown-item\" (click)=\"logout()\"><i class=\"fa fa-lock\"></i> &nbsp;{{ \" Log Out\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
 
 /***/ }),
 
@@ -3249,6 +3030,197 @@ var NavbarComponent = /** @class */ (function () {
     ], NavbarComponent);
     return NavbarComponent;
 }());
+
+
+
+/***/ }),
+
+/***/ "./src/app/physician/physician.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/physician/physician.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BoeXNpY2lhbi9waHlzaWNpYW4uY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/physician/physician.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/physician/physician.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<app-navbar></app-navbar>\r\n\r\n<style>\r\n  .grad {\r\n    background-image: linear-gradient(to bottom right, rgb(32, 168, 168), rgb(219, 231, 237));\r\n    background-repeat: no-repeat;\r\n    background-size: 100%;\r\n    padding-bottom: 25px;\r\n  }\r\n\r\n  .background {\r\n    padding-top: 3%;\r\n    padding-bottom: 13%;\r\n    background: url('assets/files/wall.jpg') no-repeat center center;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    width: 100%;\r\n    height: auto;\r\n  }\r\n\r\n  .required-field {\r\n    color: red;\r\n  }\r\n\r\n  .alertRedColor {\r\n    color: red;\r\n  }\r\n</style>\r\n\r\n<div class=\"container-fluid background\">\r\n  <div class=\"row justify-content-center\">\r\n    <div class=\"col-sm-8 col-md-6 col-lg-4\">\r\n      <div class=\"card\">\r\n        <div class=\"card-body shadow-lg grad\">\r\n          <form name=\"assetForm\">\r\n            <h2 *ngIf=\"!form.data.id\" class=\"text-primary font-weight-bold\" style=\"text-align: center;\">\r\n              {{ 'Add physician' | translate }}\r\n            </h2>\r\n            <h2 *ngIf=\"form.data.id\" class=\"text-primary font-weight-bold\" style=\"text-align: center;\">\r\n              {{ 'Update physician' | translate }}\r\n            </h2>\r\n\r\n            <!-- Form error messages -->\r\n            <div *ngIf=\"form.error && form.message\" class=\"alert alert-danger alert-dismissible fade show\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n              {{ form.message }}\r\n            </div>\r\n            <div *ngIf=\"!form.error && form.message\" class=\"alert alert-success alert-dismissible fade show\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n              {{ form.message }}\r\n            </div>\r\n\r\n            <!-- Name Field with Validation -->\r\n            <div class=\"form-group pt-2\">\r\n              <label><b>{{ 'FullName' | translate }}</b><span class=\"required-field\">*</span></label>\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fa fa-user grey-text\"></i></div>\r\n                </div>\r\n                <input type=\"text\" name=\"fullName\" [(ngModel)]=\"form.data.fullName\" class=\"form-control\"\r\n                  (keydown)=\"filterInputS($event, 'errorMessagefullName', 20, 'char')\"\r\n                  placeholder=\"{{ 'Enter fullName' | translate }}\">\r\n              </div>\r\n              <span *ngIf=\"errorMessagefullName\" class=\"alertRedColor\">{{ errorMessagefullName }}</span>\r\n              <span *ngIf=\"form.inputerror?.fullName\" class=\"alertRedColor\">{{ form.inputerror.fullName }}</span>\r\n            </div>\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label><b>{{ 'BirthDate' | translate }}</b><span class=\"required-field\">*</span></label>\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fa fa-calendar grey-text\"></i></div>\r\n                </div>\r\n                <input type=\"date\" name=\"birthDate\" [value]=\"form.data.birthDate | date:'yyyy-MM-dd'\"\r\n                  class=\"form-control\" (input)=\"form.data.birthDate=parseDate($event.target.value)\"\r\n                  placeholder=\"{{ 'Enter BirthDate ' | translate }}\" required>\r\n              </div>\r\n\r\n              <span *ngIf=\"form.inputerror?.birthDate\" class=\"alertRedColor\">{{ form.inputerror.birthDate }}</span>\r\n            </div>\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label><b>{{ 'Phone' | translate }}</b><span class=\"required-field\">*</span></label>\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fa fa-phone grey-text\"></i></div>\r\n                </div>\r\n                <input type=\"text\" name=\"phone\" [(ngModel)]=\"form.data.phone\" class=\"form-control\"\r\n                  (keydown)=\"filterInput($event, 'errorMessagePhone', 10, 'int')\"\r\n                  placeholder=\"{{ 'Enter Phone' | translate }}\" required>\r\n              </div>\r\n              <span *ngIf=\"errorMessagePhone\" class=\"alertRedColor\">{{ errorMessagePhone }}</span>\r\n              <span *ngIf=\"form.inputerror?.phone\" class=\"alertRedColor\">{{ form.inputerror.phone }}</span>\r\n            </div>\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label><b>{{ 'specialization' | translate }}</b><span class=\"required-field\">*</span></label>\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fa fa-paint-brush grey-text\"></i></div>\r\n                </div>\r\n                <select class=\"form-control\" name=\"specialization\" [(ngModel)]=\"form.data.specialization\"\r\n                  aria-label=\"ngSelected\" required>\r\n                  <option [ngValue]=\"undefined\">{{ 'Select phy specialization' | translate }}</option>\r\n                  <option value=\"Neurologist\">{{'Neurologist' | translate}} </option>\r\n                  <option value=\"Dentist\">{{'Dentist' | translate}} </option>\r\n                  <option value=\"Surgeon\">{{'Surgeon' | translate}} </option>\r\n\r\n                </select>\r\n              </div>\r\n              <span *ngIf=\"form.inputerror?.specialization\" class=\"alertRedColor\">{{ form.inputerror.specialization\r\n                }}</span>\r\n            </div>\r\n\r\n            <div class=\"row pt-2 pl-2 pb-3\">\r\n\r\n              <div class=\"col-md-3\"></div>\r\n\r\n              <div class=\"pt-2\">\r\n                <button *ngIf=\"!form.data.id > 0\" (click)=\"submit()\" class=\"btn btn-success mr-2\">\r\n                  {{ 'Save' | translate }}\r\n                </button>\r\n              </div>\r\n\r\n              <div class=\"col-md-1\"></div>\r\n\r\n              <div class=\"pt-2\">\r\n                <button *ngIf=\"form.data.id > 0\" (click)=\"submit()\" class=\"btn btn-success mr-2\">\r\n                  {{ 'Update' | translate }}\r\n                </button>\r\n              </div>\r\n\r\n              <div class=\"pt-2\">\r\n                <a class=\"btn btn-warning mr-1\" type=\"button\" [routerLink]=\"['/physicianlist']\"\r\n                  style=\"text-decoration: none; color: white;\">\r\n                  {{ 'List' | translate }}\r\n                </a>\r\n              </div>\r\n\r\n            </div>\r\n\r\n          </form>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<app-footer></app-footer>"
+
+/***/ }),
+
+/***/ "./src/app/physician/physician.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/physician/physician.component.ts ***!
+  \**************************************************/
+/*! exports provided: PhysicianComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhysicianComponent", function() { return PhysicianComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../base.component */ "./src/app/base.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _service_locator_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service-locator.service */ "./src/app/service-locator.service.ts");
+
+
+
+
+
+var PhysicianComponent = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](PhysicianComponent, _super);
+    function PhysicianComponent(locator, route) {
+        var _this = _super.call(this, locator.endpoints.PHYSICIAN, locator, route) || this;
+        _this.locator = locator;
+        _this.route = route;
+        _this.errorMessageTitle = '';
+        _this.errorMessagefullName = '';
+        return _this;
+    }
+    PhysicianComponent.prototype.validateForm = function (form) {
+        var flag = true;
+        var validator = this.serviceLocator.dataValidator;
+        flag = flag && validator.isNotNullObject(form.fullName);
+        flag = flag && validator.isNotNullObject(form.birthDate);
+        flag = flag && validator.isNotNullObject(form.phone);
+        flag = flag && validator.isNotNullObject(form.specialization);
+        return flag;
+    };
+    PhysicianComponent.prototype.populateForm = function (form, data) {
+        form.id = data.id;
+        form.fullName = data.fullName;
+        form.birthDate = data.birthDate;
+        form.phone = data.phone;
+        form.specialization = data.specialization;
+    };
+    PhysicianComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-physician',
+            template: __webpack_require__(/*! ./physician.component.html */ "./src/app/physician/physician.component.html"),
+            styles: [__webpack_require__(/*! ./physician.component.css */ "./src/app/physician/physician.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_locator_service__WEBPACK_IMPORTED_MODULE_4__["ServiceLocatorService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
+    ], PhysicianComponent);
+    return PhysicianComponent;
+}(_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseCtl"]));
+
+
+
+/***/ }),
+
+/***/ "./src/app/physician/physicianlist.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/physician/physicianlist.component.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BoeXNpY2lhbi9waHlzaWNpYW5saXN0LmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/physician/physicianlist.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/physician/physicianlist.component.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<app-navbar></app-navbar>\r\n\r\n<style>\r\n  #nnn {\r\n    background: none;\r\n    border: none;\r\n    cursor: pointer;\r\n  }\r\n\r\n  .panel-heading {\r\n    height: 50px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n  }\r\n\r\n  .search-inputs {\r\n    margin-top: 20px;\r\n  }\r\n\r\n  .search-inputs .form-control,\r\n  .search-inputs .btn {\r\n    margin-bottom: 10px;\r\n  }\r\n\r\n  .content-wrapper {\r\n    background: url('assets/files/teahu.png') no-repeat center center;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    width: auto;\r\n    height: 105vh;\r\n    padding: 20px;\r\n  }\r\n\r\n  .table-responsive {\r\n    margin-top: 20px;\r\n  }\r\n\r\n  .search-inputs .col-sm-2,\r\n  .search-inputs .col-sm-1 {\r\n    padding: 0 5px;\r\n  }\r\n\r\n  .alertRedColor {\r\n    color: red;\r\n  }\r\n</style>\r\n<div class=\"content-wrapper\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"panel panel-primary\" style=\"padding-top: 73px;\">\r\n      <div class=\"panel-heading\">\r\n        <h1 class=\"text-primary font-weight-bold\">{{ 'Physician List' | translate }}</h1>\r\n      </div>\r\n\r\n      <div class=\"row search-inputs p-1 justify-content-center\">\r\n        <div class=\"col-sm-2\">\r\n          <input type=\"text\" name=\"fullName\" [(ngModel)]=\"form.searchParams.fullName\" class=\"form-control\"\r\n            (keydown)=\"filterInputS($event, 'errorMessagefullName', 20, 'char')\"\r\n            placeholder=\"{{ 'Enter FullName' | translate }}\">\r\n\r\n          <span *ngIf=\"errorMessagefullName\" class=\"alertRedColor\">{{ errorMessagefullName }}</span>\r\n        </div>\r\n\r\n\r\n\r\n        <div class=\"col-sm-2\">\r\n          <input type=\"date\" name=\"birthDate\" [(ngModel)]=\"form.searchParams.birthDate\" class=\"form-control\"\r\n            placeholder=\"{{ 'Enter birthDate ' | translate }}\">\r\n        </div>\r\n\r\n        <div class=\"col-sm-2\">\r\n          <input type=\"text\" name=\"phone\" [(ngModel)]=\"form.searchParams.phone\" class=\"form-control\"\r\n            (keydown)=\"filterInput($event, 'errorMessagePhone', 10, 'int')\"\r\n            placeholder=\"{{ 'Enter Phone no' | translate }}\">\r\n          <span *ngIf=\"errorMessagePhone\" class=\"alertRedColor\">{{ errorMessagePhone}}</span>\r\n        </div>\r\n\r\n        <div class=\"col-sm-2\">\r\n          <select class=\"form-control\" name=\"specialization\" [(ngModel)]=\"form.searchParams.specialization\"\r\n            aria-label=\"ngSelected\" required>\r\n            <option [ngValue]=\"undefined\">{{ 'Select Specialization' | translate }}</option>\r\n            <option value=\"Neurologist\">{{'Neurologist' | translate}} </option>\r\n            <option value=\"Surgeon\">{{'Surgeon' | translate}} </option>\r\n            <option value=\"Dentist\">{{'Dentist' | translate}} </option>\r\n\r\n          </select>\r\n\r\n        </div>\r\n\r\n        <div class=\"col-sm-1\">\r\n          <button (click)=\"submit()\" class=\"btn btn-primary\">{{ 'Search' | translate }}</button>\r\n        </div>\r\n\r\n        <div class=\"col-sm-2\">\r\n          <button (click)=\"forward('/physician')\" type=\"button\" class=\"btn btn-success\">\r\n            {{ 'Add Physician' | translate }}\r\n          </button>\r\n        </div>\r\n\r\n        <div class=\"col-sm-1\">\r\n          <button (click)=\"deleteMany()\" class=\"btn btn-danger\">{{ 'Delete' | translate }}</button>\r\n        </div>\r\n      </div>\r\n\r\n      <div *ngIf=\"form.error\" class=\"alert alert-danger alert-dismissible\">\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n        {{ form.message }}\r\n      </div>\r\n\r\n      <div *ngIf=\"!form.error && form.message != null\" class=\"alert alert-success alert-dismissible\">\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n        {{ form.message }}\r\n      </div>\r\n\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table table-bordered table-hover font-weight-bold text-dark\">\r\n          <thead class=\"thead-dark text-uppercase\">\r\n            <tr align=\"center\">\r\n              <th><input type=\"checkbox\" [(ngModel)]=\"isMasterSel\" name=\"list_name\"\r\n                  (change)=\"checkUncheckAll($event)\" /></th>\r\n              <th>{{ 'S.No' | translate }}</th>\r\n              <th>{{ 'Full Name' | translate }}</th>\r\n              <th>{{ 'Birth Date' | translate }}</th>\r\n              <th>{{ 'phone' | translate }}</th>\r\n              <th>{{ 'specialization' | translate }}</th>\r\n              <th>{{ 'Edit' | translate }}</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr *ngFor=\"let m of form.list; let i = index\" align=\"center\">\r\n              <td><input type=\"checkbox\" #checkboxes (change)=\"checklistUpdate()\" name=\"list_name\" [id]=\"m.id\" /></td>\r\n              <td>{{ (form.pageNo * 5) + i + 1 }}</td>\r\n              <td>{{ m.fullName }}</td>\r\n              <td>{{ m.birthDate | date:'yyyy-MM-dd' }}</td>\r\n              <td>{{ m.phone }}</td>\r\n              <td>{{m.specialization}}</td>\r\n\r\n              <td>\r\n                <button class=\"fa fa-edit text-primary\" id=\"nnn\" (click)=\"forward('/physician/' + m.id)\">\r\n                </button>\r\n              </td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n\r\n        <div class=\"d-flex justify-content-between mt-3\">\r\n          <button (click)=\"previous()\" [disabled]=\"form.pageNo == 0\" class=\"btn btn-info\">{{ 'Previous' | translate\r\n            }}</button>\r\n\r\n          <div>\r\n            <a class=\"btn btn-warning mr-1\" [routerLink]=\"['/physicianlist']\" (click)=\"exit()\">\r\n              {{ 'Reset' | translate }}\r\n            </a>\r\n          </div>\r\n\r\n          <div *ngIf=\"form.list.length == 0\">\r\n            <a class=\"btn btn-warning mr-1\" [routerLink]=\"['/physicianlist']\" (click)=\"exit()\">\r\n              {{ 'Back' | translate }}\r\n            </a>\r\n          </div>\r\n          <button (click)=\"next()\" [disabled]=\"nextList == 0\" class=\"btn btn-info\">{{ 'Next' | translate }}</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<app-footer></app-footer>"
+
+/***/ }),
+
+/***/ "./src/app/physician/physicianlist.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/physician/physicianlist.component.ts ***!
+  \******************************************************/
+/*! exports provided: PhysicianListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhysicianListComponent", function() { return PhysicianListComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _base_list_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../base-list.component */ "./src/app/base-list.component.ts");
+/* harmony import */ var _service_locator_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../service-locator.service */ "./src/app/service-locator.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+
+
+
+var PhysicianListComponent = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](PhysicianListComponent, _super);
+    function PhysicianListComponent(locator, route, httpClient) {
+        var _this = _super.call(this, locator.endpoints.PHYSICIAN, locator, route) || this;
+        _this.locator = locator;
+        _this.route = route;
+        _this.httpClient = httpClient;
+        _this.myKey = "";
+        _this.errorMessageFullName = '';
+        _this.form = {
+            error: false,
+            message: null,
+            preload: [],
+            data: { id: null },
+            inputerror: {},
+            searchParams: {},
+            searchMessage: null,
+            list: [],
+            pageNo: 0
+        };
+        return _this;
+    }
+    PhysicianListComponent.prototype.validateFullName = function (event) {
+        var inputValue = event.target.value;
+        var inputChar = event.key;
+        var alphabetPattern = /^[a-zA-Z]*$/; // Pattern to match only alphabetic characters
+        if (!alphabetPattern.test(inputChar) && !['Backspace', 'Delete', 'Tab'].includes(inputChar)) {
+            event.preventDefault();
+            this.errorMessageFullName = 'Only alphabets are allowed.';
+            return;
+        }
+        if (inputValue.length < 3) {
+            this.errorMessageFullName = 'name must be at least 3 characters .';
+        }
+        else if (inputValue.length > 15) {
+            this.errorMessageFullName = 'name must contain only 15 character.';
+        }
+        else {
+            this.errorMessageFullName = ''; // Clear error message if valid
+        }
+    };
+    PhysicianListComponent.prototype.validateAlphabetInput = function (event) {
+        var charCode = event.which || event.keyCode;
+        var charStr = String.fromCharCode(charCode);
+        // Regular expression to test if the character is a letter
+        if (!/^[a-zA-Z]+$/.test(charStr)) {
+            event.preventDefault();
+        }
+    };
+    PhysicianListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-physicianlist',
+            template: __webpack_require__(/*! ./physicianlist.component.html */ "./src/app/physician/physicianlist.component.html"),
+            styles: [__webpack_require__(/*! ./physicianlist.component.css */ "./src/app/physician/physicianlist.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_locator_service__WEBPACK_IMPORTED_MODULE_3__["ServiceLocatorService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"]])
+    ], PhysicianListComponent);
+    return PhysicianListComponent;
+}(_base_list_component__WEBPACK_IMPORTED_MODULE_2__["BaseListCtl"]));
 
 
 
@@ -4583,7 +4555,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Rays Software\Project10\Project_10\ORSProj10\ORSProject10-UI\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Rays Software\UseCase-project10\ORSProject10-UI\src\main.ts */"./src/main.ts");
 
 
 /***/ })
